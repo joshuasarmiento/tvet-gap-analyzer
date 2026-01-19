@@ -13,7 +13,7 @@ const options = [
 
 const loadData = async () => {
   loading.value = true
-  const res = await fetch(`http://localhost:3000/api/analyze?file=${selectedIndex.value}`)
+  const res = await fetch(`https://tvet-gap-analyzer-api.vercel.app/api/analyze?file=${selectedIndex.value}`)
   stats.value = await res.json()
   loading.value = false
 }
